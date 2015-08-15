@@ -1,0 +1,687 @@
+/* TOP NAVBAR ////////////////////////////////////////////////////////////////*/
+
+body.sos-fixed {
+	padding: 34px 0 0 0 !important;
+}
+
+body.sos-navbar.sos-fixed {
+	padding: 3rem 0 0 0 !important;
+}
+
+body.sos-fixed .topbar {
+	position:fixed;
+	top:0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+}
+
+.topbar {
+	background: #333 !important;
+}
+
+body.sos-navbar .topbar,
+body.sos-navbar .topbar-wrapper {
+	height: 3rem !important;
+}
+
+body.sos-navbar .topbar-wrapper {
+	padding: 0 !important;
+	width: 1030px !important;
+}
+
+body.sos-navbar .network-items > a,
+body.sos-navbar .topbar-links > a,
+body.sos-navbar .topbar-menu-links > a {
+	line-height: 34px !important;
+	height: 34px !important;
+	padding: 0 !important;
+	border-top: .4375rem solid transparent;
+	border-bottom: .4375rem solid transparent;
+}
+
+body.sos-navbar .network-items > a {
+	background-clip: content-box, border-box;
+}
+
+body.sos-navbar .topbar-menu-links {
+	margin: 0 1rem 0 0 !important;
+}
+
+body.sos-navbar .topbar-menu-links > a:not(.icon-help),
+body.sos-navbar .topbar-links > .profile-me {
+	padding: 0 .5rem !important;
+}
+
+body.sos-navbar .topbar .topbar-menu-links > a.icon-help {
+	position: relative;
+	height: 34px !important;
+	padding: 0 2rem 0 .5rem !important;
+}
+
+body.sos-navbar .topbar-menu-links > a::after {
+	content:"";
+	position:absolute;
+	top: 50%;
+	right: 1rem;
+	margin: -2px -4px 0 0;
+	border: 4px solid transparent;
+	border-top: 4px solid #999;
+}
+
+body.sos-navbar .topbar-menu-links .triangle {
+	display:none !important;
+}
+
+body.sos-navbar .topbar-links {
+	right: .5rem !important;
+	background: #333;
+}
+
+body.sos-navbar .topbar-links .links-container {
+	padding: 0 !important;
+}
+
+body.sos-navbar .gravatar-wrapper-24 > .avatar-me.js-avatar-me{
+	vertical-align: middle;
+}
+
+
+
+
+
+/* SEARCHBOX /////////////////////////////////////////////////////////////////*/
+
+body.sos-navbar .search-container{
+	border-top: .4375rem solid transparent;
+	border-bottom: .4375rem solid transparent;
+	margin: 0 !important;
+}
+
+body.sos-navbar #search {
+	height: 34px;
+	width: 200px;
+}
+
+body.sos-navbar #search > input[type="text"] {
+}
+
+body.sos-navbar #search > input {
+	margin: 0 !important;
+	border: none;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 .5rem !important;
+	border-radius: 3px;
+	
+	box-sizing:border-box;
+	box-shadow: 0 0 16px -4px #000, -8px 0 6px 2px #333;
+	width: 200px !important;
+	max-width: none !important;
+	
+	transition: width ease-out .2s,  left ease-out .2s;
+	
+	left:0;
+	position:relative;
+	
+	background: #FFF;
+	outline:none;
+}
+
+body.sos-navbar #search > input:focus {
+	width: 300px !important;
+	left: -100px;
+	color: #FFF;
+}
+
+body.sos-black #search > input {
+	background: #000 !important;
+	color: #999;
+}
+
+
+
+
+
+/* EDITOR ////////////////////////////////////////////////////////////////////*/
+
+body.sos-editor .post-editor {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+body.sos-editor .wmd-button-bar,
+body.sos-editor .wmd-input {
+	width: 100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	float:none;
+}
+
+body.sos-editor .wmd-input {
+	opacity: 1 !important;
+}
+
+body.sos-editor .wmd-input:focus {
+	border-color:#000;
+}
+	
+body.sos-editor .wmd-preview {
+	position: relative;
+	width: 100%;
+}
+
+
+
+
+
+/* EDIT ANSWER (ORIGINAL QUESTION) ****************************************/
+
+body.sos-editor .post-editor > h2 {
+	margin: 0 0 1rem 0 !important;
+	line-height: 34px;
+	height: 34px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+body.sos-editor .post-editor > h2 > a{	
+	font-family: 'Century Gothic', sans-serif;
+	font-size: .8125rem !important;
+	font-weight: bold;
+	border-bottom: 1px dotted #0AF;
+}
+
+body.sos-editor .post-editor > h2 + div > .original-question{	
+	height: 400px !important;
+	/*overflow-x:hidden;*/
+	overflow-y: scroll !important;
+	width: 100%;
+	margin: 0 0 1rem 0 !important;
+	padding: 10px;
+	border: 1px solid #CCC;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body.sos-editor .post-editor > h2 + div > .original-question + .grippie,
+body.sos-editor .post-editor > h2 + div + h2 {	
+	display: none;
+}
+
+	
+
+	
+	
+/* QUESTION TITLE *********************************************************/
+
+body.sos-editor .ask-title {
+	padding: 0 !important;
+}
+
+/*body.sos-editor table.ask-title-table,*/
+body.sos-editor .form-item > table {
+	width: 100% !important;
+	margin: 0 0 1rem 0;
+}
+
+/*body.sos-editor td.ask-title-cell-key,*/
+body.sos-editor .form-item > table tr td:first-child {
+	width: 44px !important;
+}
+
+/*body.sos-editor td.ask-title-cell-value,*/
+body.sos-editor .form-item > table td {
+	position: relative;
+}
+
+/*body.sos-editor .ask-title-cell-key > label,*/
+body.sos-editor .form-item > table td > label {
+	font-family: 'Century Gothic', sans-serif;
+	font-size: .8125rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0 1rem 0 0 !important;
+	line-height: 34px;
+	cursor: pointer;
+}
+
+/*body.sos-editor .ask-title-cell-value > #title,*/
+body.sos-editor .form-item > table td > input {
+	position: absolute !important;
+	top:0;
+	left: -44px;
+	right: 0;
+	width: 100% !important;
+	
+	margin: 0 !important;
+	box-shadow: none;
+	border: none !important;
+	border-bottom: 1px solid #CCC !important;
+	line-height: 34px;
+	padding: 0 0 0 44px;
+	background: transparent;
+	
+	font-family: 'Century Gothic', sans-serif;
+	font-size: .8125rem;
+	font-weight: bold;		
+	
+	opacity: 1 !important;
+}
+
+/*body.sos-editor .form-item > table td > input + span,*/
+body.sos-editor .form-item > table td > input.actual-edit-overlay{
+	display:none;
+}
+
+/*body.sos-editor .ask-title-cell-value > #title.validation-error:focus,*/
+body.sos-editor .form-item > table td > input.validation-error {
+	border-color: #C04848 !important;
+}
+
+/*body.sos-editor .ask-title-cell-value > #title:focus,*/
+body.sos-editor .form-item > table td > input:focus {
+	border-bottom: 1px solid #000 !important;
+}
+
+
+
+
+
+/* TITLE ERROR MESSAGE ****************************************************/
+
+body.sos-editor .ask-title-cell-value > #title + .message-error,
+body.sos-editor .form-item > table td > input ~ .message-error {
+	top: 100% !important;
+	left: 0 !important;
+}
+
+body.sos-editor .ask-title-cell-value > #title + .message-error > div::before,
+body.sos-editor .form-item > table td > input ~ .message-error > div::before {
+	top: -8px !important;
+	left: 0 !important;
+	border: 4px solid transparent !important;
+	border-bottom: 4px solid #c04848 !important;
+	border-left: 4px solid #c04848 !important;
+}
+
+
+
+
+
+/* GRIPPIE ///////////////////////////////////////////////////////////////////*/
+
+body.sos-editor .wmd-input + .grippie {
+	position:relative;
+	width: 100%;
+	height: 10px;
+	border: 1px solid #CCC;
+	border-top: none;
+	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	float:none;
+	background: #EEE;
+}
+
+body.sos-editor .wmd-input + .grippie::before {
+	content:"";
+	position:absolute;
+	height: 0;
+	width: 50px;
+	border-top: 1px solid #CCC;
+	box-shadow: 0 -2px 0 0 #CCC, 0 2px 0 0 #CCC;
+	left: 50%;
+	top:4px;
+	margin: 0 0 0 -25px;
+}
+
+
+
+
+
+/* FORM TOP CONTROLS /////////////////////////////////////////////////////////*/
+
+body.sos-editor .wmd-button-bar {
+	border:none;
+	margin: 0;
+}
+
+
+
+
+
+/* FORM HELP /////////////////////////////////////////////////////////////////*/
+
+body.sos-help .wmd-help-button.active-help {
+	background: none;
+}
+
+body.sos-help .wmd-help-button.active-help::before ,
+body.sos-help .wmd-help-button.active-help::after {
+	content:"";
+	position: absolute;
+	bottom:-3px;
+	left:50%;
+	margin: 0 0 0 -5px;
+	border: 5px solid transparent;
+	border-bottom-color: #fff7e5;
+	z-index: 200;
+}
+
+body.sos-help .wmd-help-button.active-help::before {
+	bottom: -2px;
+	border-bottom-color: #BBB;
+}
+
+
+
+
+
+/* FORM HELP BUBBLES /////////////////////////////////////////////////////////*/
+
+body.sos-help .mdhelp {
+	z-index: 100;
+	top: 43px !important;
+	left: -13px;
+	width: calc(100% + 26px) !important;
+}	
+
+body.sos-help.sos-editor .mdhelp {
+	top: 44px !important;
+	left: -12px;
+	width: calc(100% + 24px) !important;
+}
+
+body.sos-help .mdhelp {
+	box-shadow: rgb(0, 0, 0) 0px 0px 32px -12px;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+body.sos-help .mdhelp-tab {
+	border-bottom: 1px solid #BBB;
+	overflow:hidden;
+}
+
+body.sos-help .mdhelp-tabs {
+	border: none;
+	padding: 0 0 1px 0;
+	overflow:hidden;
+	box-shadow: inset 0 -1px 0 0 #BBB !important;	
+}
+	
+body.sos-help .mdhelp-tabs > li {
+	padding: .5rem;
+	margin: 0 1px 0 0;
+	float:left;
+}		
+	
+body.sos-help .mdhelp-tabs > li.selected {
+	box-shadow: 1px 0 0 0 #BBB,  -1px 0 0 0 #BBB, 0 1px 0 0 #fff7e5;
+}
+
+/* This DIV displace the answer textarea when the help bubbles are shown,
+   but they are absolute-positioned, so we can just hide this DIV in order
+   to have the bubbles overlay the textarea. */
+body.sos-overlay .wmd-button-bar + div {
+	display:none;
+}
+
+
+
+
+
+/* FORM BOTTOM BUTTONS ///////////////////////////////////////////////////////*/
+
+.post-form .form-submit {
+	padding: 0;
+	margin: 15px 0 0 0;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	overflow:hidden;
+	width: 660px;
+}
+
+body.sos-editor .post-form .form-submit {
+	width: auto;
+}
+
+#submit-button,
+#submit-button-42 {
+	margin: 0;
+}
+
+body.sos-editor #submit-button,
+body.sos-editor #submit-button-42,
+body.sos-editor #submit-button + .discard-answer,
+body.sos-editor #submit-button + .discard-question,
+body.sos-editor #submit-button + .cancel-edit,
+body.sos-editor #submit-button-42 + .discard-question {
+	float: right;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	padding: 0 1rem;
+	border-radius: 2px;
+	box-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	font-size: .8125rem;
+	font-weight: bold;
+	font-family: "Century Gothic", Sans-Serif;
+	top:0;
+	outline: none;
+}
+
+
+body.sos-editor #submit-button,
+body.sos-editor #submit-button-42 {
+	color:#FFF;
+	background: #70E;
+	transition: box-shadow ease-in .25s, background ease-in .25s;
+}
+
+body.sos-editor #submit-button:hover,
+body.sos-editor #submit-button-42:hover {
+	box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);
+	background: #81F;
+}
+
+body.sos-editor #submit-button + .discard-answer,
+body.sos-editor #submit-button + .discard-question,
+body.sos-editor #submit-button + .cancel-edit,
+body.sos-editor #submit-button-42 + .discard-question {
+	margin: 0 .5rem 0 0;
+	color:#CCC;
+	background: transparent;
+	transition: background ease-in .25s;
+}
+
+body.sos-editor #submit-button + .discard-answer:hover,
+body.sos-editor #submit-button + .discard-question:hover,
+body.sos-editor #submit-button + .cancel-edit:hover,
+body.sos-editor #submit-button-42 + .discard-question:hover {
+	background: #EEE;
+}
+
+
+
+
+/* WIDTH <= 1030 /////////////////////////////////////////////////////////////*/
+
+@media (max-width: 1029px) {
+	/* TOP NAVBAR *************************************************************/
+
+	body.sos-navbar.sos-fixed .topbar-wrapper {
+		width: 100% !important;
+	}
+}
+
+
+
+
+
+/* WIDTH >= 1456 /////////////////////////////////////////////////////////////*/
+
+@media (min-width: 1456px) { 
+
+	/* EDITOR *****************************************************************/
+
+	body.sos-editor #content {
+		overflow: visible;
+	}
+
+	body.sos-editor .post-form {
+		position: relative;
+		width: 1456px;
+		background: #FFF;
+		margin: 64px 0 32px -228px;
+		padding: 10px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+
+		box-shadow: 0 .75rem 6rem 0 rgba(0,0,0,.15), 0 .5rem 1rem -.25rem rgba(0,0,0,.25);
+		border-radius: 2px;
+
+		user-select: none;
+		-webkit-user-select: none;
+		
+		z-index: 900;
+	}
+	
+	body.sos-editor.sos-editor .post-form {
+		padding: 10px 10px calc(3rem + 10px) 10px;
+	}
+	
+	body.sos-editor .wmd-input {
+		min-height: 300px;	
+		user-select: all;
+		-webkit-user-select: all;
+	}
+	
+	body.sos-editor .wmd-button-bar,
+	body.sos-editor .wmd-input {
+		width: 50%; /* = 728px */
+	}
+
+	body.sos-editor .wmd-preview {
+		position: absolute;
+		left: 50%;
+		top: 44px;
+		margin: 0;
+		bottom: 0;
+		margin: 0 0 10px 0;
+		height: auto;
+		
+		border: 1px solid #CCC;
+		border-left: none;
+		
+		padding: 10px;
+		
+		width: 50%;
+		
+		overflow-x:hidden;
+		overflow-y:auto;
+		
+		ser-select: all;
+		-webkit-user-select: all;
+	}
+
+	/* ANSWER & PREVIEW TITLES ************************************************/
+	
+	body.sos-editor .post-form > h2.space {
+		display:none;
+	}
+
+	body.sos-editor .wmd-button-bar::after {
+		content:"Preview";
+		position:absolute;
+		top: 0;
+		left: 50%;
+		right:0;
+		height: 43px;
+
+		font-family: 'Century Gothic', sans-serif;
+		font-size: .8125rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 44px;
+		
+		padding: 0 0 0 12px;
+		
+		border-top: 1px solid #CCC;
+		border-right: 1px solid #CCC;
+	}
+	
+	body.sos-editor.sos-editor .wmd-button-bar::after {
+		border: none;
+	}
+	
+	/* FORM BOTTOM CONTROLS ***************************************************/
+
+	body.sos-editor .post-editor > div:first-child + .fl {
+		display:none;
+	}
+	
+	body.sos-editor .draft-saved,
+	body.sos-editor .draft-discarded,
+	body.sos-editor .draft-discarded + .community-option {
+		top: auto;
+		line-height: 2rem;
+		height: 2rem !important;
+		margin: 0 0 1rem 0 !important;
+	}
+	
+	body.sos-editor .draft-discarded + .community-option {
+		margin: 0 50% 1rem 0 !important;
+		padding: 0;
+	}
+	
+	/* FORM BOTTOM BUTTONS ****************************************************/
+	
+	body.sos-editor.sos-editor .post-form .form-submit {
+		position: absolute;
+		left: 50%;
+		right: .5rem;
+		bottom: 10px;
+		margin: 0 2px 0 0;
+	}
+	
+	/* QUESTION SIDEBAR *******************************************************/
+	
+	body.sos-editor #sidebar.ask-sidebar {
+		display: none;
+	}
+
+	/* ASK QUESTION SUGGESTIONS ***********************************************/
+	
+	body.sos-editor div#question-suggestions {
+		width: 100%;
+	}
+	
+	/* EDIT QUESTION **********************************************************/
+	
+	body.sos-editor .post-editor div:not(.fl) + div:not(.fl) + .fl ~ .wmd-preview {	
+		top: calc(44px + 1rem + 34px);
+	}
+	
+	body.sos-editor .edit-field-overlayed {
+		top: -19px;
+	}
+	
+	/* EDIT ANSWER (ORIGINAL QUESTION) ****************************************/
+	
+	body.sos-editor .post-editor > h2 + div + h2 ~ .wmd-preview{	
+		top: calc(44px + 2rem + 434px);
+	}
+	
+	body.sos-editor .post-editor + div > div + div .edit-field-overlayed {
+		top: 0;
+	}
+}

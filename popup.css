@@ -1,0 +1,400 @@
+html, body{
+	padding:2.5rem 0;
+	margin:0;
+	height: calc(485px - 5rem);
+	width: 300px;
+
+	font-family: "Calibri Light", Sans-Serif;
+
+	/* Estas lineas a continuación evitan que se pueda seleccionar texto en nuestr página/aplicación: */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	font-size: 1rem;
+	line-height: 1.2rem;
+	
+	overflow: hidden;
+}
+
+/* RESET /////////////////////////////////////////////////////////////////////*/
+
+ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+a, a:link, a:active, a:visited, a:hover{
+	color: inherit; text-decoration: none
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: "Century Gothic", Sans-Serif;
+	
+	font-size: 1rem;
+	line-height: 1.2rem;
+	
+	font-weight: bold;
+	
+	position:relative;
+}
+
+h1 {
+	line-height: 2.5rem;
+	padding: 0 5rem 0 .5rem;
+}
+
+h2, h3 {
+	border-bottom: 1px solid #EEE;
+	padding: 1rem 4rem .25rem .5rem;
+	/*line-height: 2.5rem;*/
+}
+
+h2.just-heading {
+	padding: 1rem .5rem .25rem .5rem;
+}
+
+h3 {
+	font-size: .8rem;
+	padding: 1rem 4rem .25rem 0;
+}
+
+h3.just-heading {
+	padding: 1rem 0 .25rem 0;
+}
+
+p {
+	margin: .5rem 0;
+	text-align: justify;
+}
+
+code {
+	background: #EEE;
+	padding: 0 .25rem;
+	border-radius: 3px;
+}
+
+/* TITLEBAR & FOOTER /////////////////////////////////////////////////////////*/
+
+#extension-name {
+	font-weight: normal;
+}
+
+#action-bar {
+	position:fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	
+	height: 2.5rem;
+	line-height: 2.5rem;
+	
+	box-shadow: 0 0 20px -8px #000;
+	
+	white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+	
+	background: #FFF;
+	z-index: 900;
+}
+
+/* OPTIONS LIST //////////////////////////////////////////////////////////////*/
+
+#options-list {
+	/*padding: .6875rem 3.5rem .6875rem .5rem;*/
+	/*padding: .5rem;*/
+	
+	position:absolute;
+	top:2.5rem;
+	bottom:0;
+	left:0;
+	margin: 0;
+	
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#options-list  > li {
+	position:relative;
+}
+
+.sublist > li {
+	position: relative;
+}
+
+.sublist .checkbox {
+	right: -3rem;
+	top:0;
+}
+
+.content {
+	position: relative;
+	padding: 0 .5rem;
+}
+
+#options-list::after, .content::after {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,.85);
+}
+
+#options-list::after {
+	position: fixed;
+	top: 2.5rem;
+	bottom: 2.5rem;
+	left: 0;
+}
+
+#options-list .content::after {
+	display:none;
+}
+
+#options-list.visible .content::after {
+	display:block;
+}
+
+#options-list.visible::after, .content.visible::after  {
+	display:none !important;
+}
+
+/* OPTIONS LIST SCROLLBAR ////////////////////////////////////////////////////*/
+
+#options-list::-webkit-scrollbar {
+	width: .625rem;
+}
+ 
+#options-list::-webkit-scrollbar-track {
+	background: #FFF;
+}
+ 
+#options-list::-webkit-scrollbar-thumb {
+	background: #EEE;
+}
+
+#options-list::-webkit-scrollbar-thumb:hover {
+	background:#CCC;
+}
+
+#options-list::-webkit-scrollbar-thumb:active {
+	background:#AAA;
+}
+
+/* CHECKBOX //////////////////////////////////////////////////////////////////*/
+
+.checkbox {
+	background: #FAFAFA;
+	border-radius: 3px;
+	padding: 1px;
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+	border: 1px solid rgba(0,0,0,.08);
+
+	outline: 0;
+	display: block;
+	width: 2.5rem;
+	height: 1.25rem;
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	box-sizing: border-box;
+	  
+	cursor: pointer;
+
+	position:absolute;
+	top:.625rem;
+	right: .5rem;
+}
+
+.checkbox::after {
+	position: relative;
+	display: block;
+	content: "";
+	width: 50%;
+	height: 100%;
+	left: 0;
+
+	border-radius: 2px;
+	background: #fbfbfb;
+	-webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+	transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 3px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 3px 0 rgba(0, 0, 0, 0.08), 0 0 16px -5px rgba(0,0,0,.5);
+}
+
+.checkbox:active {
+	background: #F0F0F0;
+}
+
+.checkbox:not(.checked):active::after {
+	margin-right: -.375rem;
+	padding-left: .375rem;
+}
+
+.checkbox.checked {
+	background: #0088BB;
+}
+.checkbox.checked::after {
+	left: 50%;
+}
+
+.checkbox.checked:active {
+	background: #007EB1;
+}
+
+.checkbox.checked:active::after {
+	margin-left: -.375rem;
+	padding-right: .375rem;
+}
+
+/* INPUT CHECKBOX (Toggle LookAndFeel) **************************************/
+
+/*
+* Copyright (c) 2013 Thibaut Courouble
+* http://www.cssflow.com
+*
+* Licensed under the MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+.switch {
+	width: 3rem;
+	height: 1rem;
+	padding: 3px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	background-image: -webkit-linear-gradient(top, #eeeeee, white 25px);
+	background-image: -moz-linear-gradient(top, #eeeeee, white 25px);
+	background-image: -o-linear-gradient(top, #eeeeee, white 25px);
+	background-image: linear-gradient(to bottom, #eeeeee, white 25px);
+
+	
+	position: absolute;
+	right: .5rem;
+	bottom:.25rem;
+}
+
+#global-cb {
+	right: 1.125rem;
+	bottom: .5625rem;
+}
+
+h3 > .switch {
+	right: 0;
+}
+
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	-webkit-transition: 0.15s ease-out;
+	-moz-transition: 0.15s ease-out;
+	-o-transition: 0.15s ease-out;
+	transition: 0.15s ease-out;
+	-webkit-transition-property: opacity background;
+	-moz-transition-property: opacity background;
+	-o-transition-property: opacity background;
+	transition-property: opacity background;
+}
+
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+}
+
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+
+.switch.checked > .switch-label {
+	background: #22AAEE;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch.checked > .switch-label:before {
+	opacity: 0;
+}
+
+.switch.checked > .switch-label:after {
+	opacity: 1;
+}
+
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 10px;
+	height: 14px;
+	background: white;
+	border-radius: 1px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+	-webkit-transition: left 0.15s ease-out;
+	-moz-transition: left 0.15s ease-out;
+	-o-transition: left 0.15s ease-out;
+	transition: left 0.15s ease-out;
+}
+
+.switch-handle:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -5px 0 0 -3px;
+	width: 6px;
+	height: 10px;
+	background: #f9f9f9;
+	/*background: red !important;*/
+	border-radius: 1px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+	background-image: -webkit-linear-gradient(top, #eeeeee, white);
+	background-image: -moz-linear-gradient(top, #eeeeee, white);
+	background-image: -o-linear-gradient(top, #eeeeee, white);
+	background-image: linear-gradient(to bottom, #eeeeee, white);
+}
+
+.switch.checked > .switch-handle {
+	left: calc(100% - 14px);
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
+}

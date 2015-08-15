@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Set Page Color Popup</title>
+		
+		<link rel="stylesheet" type="text/css" href="popup.css">
+	</head>
+
+	<body>
+		<nav id="action-bar">
+			<h1 id="extension-name">Stack<strong>Overflow</strong> Steroids
+			
+				<!--<span id="global-cb" class="checkbox"></span>-->
+			
+				
+				<label id="global-cb" class="switch">
+					<span class="switch-label" data-on="On" data-off="Off"></span>
+					<span class="switch-handle"></span>
+				</label>
+			
+			</h1>
+		</nav>
+		
+		<ul id="options-list">
+			<li>
+				<h2 class="just-heading">TOP NAVBAR</h2>
+				
+				<div class="content visible">
+					<ul class="sublist">
+						<li>
+							<h3>Responsive design
+				
+								<label id="navbar-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Make the top navbar responsive and a bit highest.</p>
+						</li>
+						
+						<li>
+							<h3>Fixed on top
+				
+								<label id="fixed-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Keep the top navbar always visible on top of the viewport.</p>
+						</li>
+						
+						<li>
+							<h3>Black searchbox
+				
+								<label id="black-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Keep the top navbar always visible on top of the viewport.</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<h2>PRO EDITOR
+
+					<label id="editor-cb" class="switch">
+						<span class="switch-label" data-on="On" data-off="Off"></span>
+						<span class="switch-handle"></span>
+					</label>				
+				</h2>
+				<div class="content visible">
+					<p>See your answer's preview side to side with what you are actually writing without scrolling the whole page.</p>
+					<p>Note this will only work when page width is wider or equal to <code>1456px</code>.</p>
+				</div>
+			</li>
+
+			<li>
+				<h2 class="just-heading">EDITOR'S OPTIONS</h2>
+				<div class="content visible">
+					<ul class="sublist">
+						<li>
+							<h3>Block answer editor scroll
+				
+								<label id="scroll-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Prevent page scrolling when the answer editor is focused (when using keys) or the mouse is over it (when using scroll wheel).</p>
+							<p>You can still scroll it when the focus blurs or moving the mouse outside it.</p>
+						</li>
+						
+						<li>
+							<h3>Block code editor scroll
+				
+								<label id="code-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Prevent page scrolling when the code editor is focused (when using keys) or the mouse is over it (when using scroll wheel).</p>
+							<p>You can still scroll it when the focus blurs or moving the mouse to the margins around the editor popup.</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<li>
+				<h2 class="just-heading">EDITOR HELP</h2>
+				<div class="content visible">
+					<ul class="sublist">
+						<li>
+							<h3>Stylish design
+				
+								<label id="help-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>Just some extra borders, delimited tabs and some other details to make it nicer.</p>
+						</li>
+						
+						<li>
+							<h3>Overlay editor's help
+				
+								<label id="overlay-cb" class="switch">
+									<span class="switch-label" data-on="On" data-off="Off"></span>
+									<span class="switch-handle"></span>
+								</label>
+							</h3>
+							
+							<p>The <em>Markdown Editing Help</em> bubbles won't displace the editor any more. They will just overlay over it.</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		
+		<!--<footer></footer>-->
+		
+		<script type="text/javascript" src="touch-options-chrome-storage.js"></script>
+		<script src="popup.js"></script>
+	</body>
+
+</html>
