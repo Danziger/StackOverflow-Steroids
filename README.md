@@ -105,6 +105,8 @@ TO-DO
 Author and License
 ------------------
 
-By Dani Gámez Franco, http://gmzcodes.com.
+Copyright (c) 2015 Dani Gámez Franco
 
-Licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Check my website for more details: http://gmzcodes.com
+
+Licensed under the [MIT license](LICENSE).
