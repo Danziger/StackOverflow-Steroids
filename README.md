@@ -1,12 +1,11 @@
 StackOverflow Steroids
 ======================
 
+**DEPRECATED - This Chrome extension / repo is not mainatained any more.** 
+
 Improved [StackOverflow](http://stackoverflow.com/) UX and usability!
 
 Download from Chrome Store: https://chrome.google.com/webstore/detail/stackoverflow-steroids/hmpehldkjbnpdhebfangeaoabhphihic
-
-
-
 
 
 How to introduce new features and improvements
