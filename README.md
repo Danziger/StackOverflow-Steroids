@@ -1,5 +1,5 @@
-StackOverflow Steroids
-======================
+DEPRECATED - StackOverflow Steroids
+===================================
 
 **DEPRECATED - This Chrome extension / repo is not mainatained any more.** 
 
