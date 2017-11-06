@@ -18,11 +18,11 @@ How to introduce new features and improvements
 
 2. Edit `steroids.css` as desired, but taking care to:
 
-  1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-navbar.sos-another-feature-id #rest-of-your > .selectors`.
+    1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-navbar.sos-another-feature-id #rest-of-your > .selectors`.
   
-      There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
+        There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
 
-  2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
+    2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
 
 
 ### Improve current features (`JS`)
@@ -31,13 +31,13 @@ How to introduce new features and improvements
 
 2. In `content-sript.js` there is a function `updateInjection()` whose first line looks like: `chrome.storage.sync.get(["global-cb", ...], function(res) { ... });`. There should be an `if`-`else` block for the feature you are looking for, for example `if(res["scroll-cb"]){ ... } else { ... }`.
  
-  1. The `if` part introduces changes, normally using event listeners, so if you want to edit a current feature you would probably need to check the event listener `function`.
+    1. The `if` part introduces changes, normally using event listeners, so if you want to edit a current feature you would probably need to check the event listener `function`.
 
-      You can see that the property is being deleted from the `res` `object` in the first line of the `if` block. This is because this feature only introduces `JS` code. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
+        You can see that the property is being deleted from the `res` `object` in the first line of the `if` block. This is because this feature only introduces `JS` code. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
 
-  2. The `else` part removes those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
+    2. The `else` part removes those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
 
-      In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
+        In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
 
 
 ### Introduce new features (`CSS`)
@@ -46,11 +46,11 @@ How to introduce new features and improvements
 
 2. Edit `steroids.css` as desired, but taking care to:
 
-  1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-feature.sos-another-feature-id #rest-of-your > .selectors`.
+    1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-feature.sos-another-feature-id #rest-of-your > .selectors`.
     
-      There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
+        There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
 
-  2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
+    2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
 
 
 ### Introduce new features (`JS`)
@@ -61,13 +61,13 @@ How to introduce new features and improvements
 
 3. Inside the callback, you should add an `if`-`else` block for the new feature, for example `if(res["feature-cb"]){ ... } else { ... }`.
  
-  1. The `if` part introduces changes, normally using event listeners, so you better create a new `function` outside the callback and bind the events from here.
+    1. The `if` part introduces changes, normally using event listeners, so you better create a new `function` outside the callback and bind the events from here.
 
-  If your feature only introduces `JS` code, delete your property from the `res` `object` in the first line of the `if` block. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
+        If your feature only introduces `JS` code, delete your property from the `res` `object` in the first line of the `if` block. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
 
-  2. The `else` must remove those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
+    2. The `else` must remove those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
 
-  In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
+        In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
 
 
 ### Target new pages
