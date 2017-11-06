@@ -12,23 +12,19 @@ Download from Chrome Store: https://chrome.google.com/webstore/detail/stackoverf
 How to introduce new features and improvements
 ----------------------------------------------
 
-###Improve current features (`CSS`)
+### Improve current features (`CSS`)
 
 1. In `popup.html` or using the inspector on the popup of the extension, find the `id` of the `<label>` associated to the feature that you want to modify. It will look something like `navbar-cb` and all of them end in `-cb`.
 
 2. Edit `steroids.css` as desired, but taking care to:
   1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-navbar.sos-another-feature-id #rest-of-your > .selectors`.
     
-    There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
+  There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
 
   2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
 
 
-
-
-
-
-###Improve current features (`JS`)
+### Improve current features (`JS`)
 
 1. In `popup.html` or using the inspector on the popup of the extension, find the `id` of the `<label>` associated to the feature that you want to modify. It will look something like `scroll-cb` and all of them end in `-cb`.
 
@@ -36,32 +32,27 @@ How to introduce new features and improvements
  
   1. The `if` part introduces changes, normally using event listeners, so if you want to edit a current feature you would probably need to check the event listener `function`.
 
-    You can see that the property is being deleted from the `res` `object` in the first line of the `if` block. This is because this feature only introduces `JS` code. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
+  You can see that the property is being deleted from the `res` `object` in the first line of the `if` block. This is because this feature only introduces `JS` code. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
 
   2. The `else` part removes those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
 
-    In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
+  In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
 
 
-
-
-
-###Introduce new features (`CSS`)
+### Introduce new features (`CSS`)
 
 1. In `popup.html`, you should add a new entry in the appropriated place. Just take a look to the current code to see what you need to copy and where to paste it. You can also create a new section if needed. Then, change the `id` of the `<label>` associated to the entry that you have created and change its title and description. It will look something like `feature-cb` and all of them must end in `-cb`.
 
 2. Edit `steroids.css` as desired, but taking care to:
+
   1. Always prefix new `CSS` selectors and put them in separated lines. For the previous example, a new selector will look something like `body.sos-feature.sos-another-feature-id #rest-of-your > .selectors`.
     
-    There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
+  There are just a few exceptional selectors that are not prefixed as they introduce very subtle changes.
 
   2. There are a few comments that group `CSS` blocks for the same feature, like `/* TOP NAVBAR ///...///*/`. Try to find the appropriated place for yours or create a new one.
 
 
-
-
-
-###Introduce new features (`JS`)
+### Introduce new features (`JS`)
 
 1. In `popup.html`, you should add a new entry in the appropriated place. Just take a look to the current code to see what you need to copy and where to paste it. You can also create a new section if needed. Then, change the `id` of the `<label>` associated to the entry that you have created and change its title and description. It will look something like `feature-cb` and all of them must end in `-cb`.
 
@@ -71,22 +62,16 @@ How to introduce new features and improvements
  
   1. The `if` part introduces changes, normally using event listeners, so you better create a new `function` outside the callback and bind the events from here.
 
-    If your feature only introduces `JS` code, delete your property from the `res` `object` in the first line of the `if` block. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
+  If your feature only introduces `JS` code, delete your property from the `res` `object` in the first line of the `if` block. If it injected `CSS` too, it should **NOT** be deleted. Otherwise, the associated `CSS` would not be applied.
 
   2. The `else` must remove those changes, so that if the user disables the associated feature, it won't be necessary to reload the existing pages for them to be disabled.
 
-    In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
+  In both cases a `try`-`catch` block is needed just in case the current feature only affects elements present in some of the pages targeted by the extension.
 
 
-
-
-
-###Target new pages
+### Target new pages
 
 To target new pages, a new rule must be added to the `matches` properties of the `manifest` (inside `content_scripts`).
-
-
-
 
 
 TO-DO
